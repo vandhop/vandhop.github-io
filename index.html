@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <video autoplay loop muted id="video-background">
+        <source src="https://static.videezy.com/system/resources/previews/000/038/030/original/Audio_Seprectrum2.mp4" type="video/mp4">
+        
+    </video>
+
+    <div id="container">
+    <h1>It's just me and my playlist</h1>
+        <h1>choose ur fav:</h1>
+        <button class="btn" onclick="linknya()">Tap button</button></button>
+        <p id="motivationText" style="display: none;"><a href="https://open.spotify.com/playlist/1fzSRwpBbxx4PQuzBjRWpb?si=0fee92fb2f6943f5" target="_blank">
+            <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/icon-spotify-pace-house-2.png" alt="my playlist" width="100px"></a></p>
+        
+    </div>
+    <div>
+        <h1></h1>
+    </div>
+    <div>
+        <script>
+            function linknya() {
+                var motivationText = document.getElementById("motivationText");
+                motivationText.style.display = "block";
+            }
+        </script>
+    <div class="clock">
+        <div class="time" id="time"></div>
+    </div>
+    <script src="script.js"></script>
+   <script>function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('time').textContent = timeString;
+}
+
+setInterval(updateClock, 1000); 
+updateClock(); </script>
+
+    
+ 
+
+
+    
+    
+    
+    
+</body>
+</html>
